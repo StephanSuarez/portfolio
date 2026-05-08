@@ -26,8 +26,10 @@ const iconBase = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
 const technologyRows = [
   [
     { name: "Kotlin", icon: `${iconBase}/kotlin/kotlin-original.svg` },
+    { name: "NestJS", icon: `${iconBase}/nestjs/nestjs-original.svg` },
     { name: "Next.js", icon: `${iconBase}/nextjs/nextjs-original.svg` },
     { name: "React", icon: `${iconBase}/react/react-original.svg` },
+    { name: "Tailwind", icon: `${iconBase}/tailwindcss/tailwindcss-original.svg` },
     { name: "TypeScript", icon: `${iconBase}/typescript/typescript-original.svg` },
     { name: "Node.js", icon: `${iconBase}/nodejs/nodejs-original.svg` }
   ],
@@ -41,6 +43,7 @@ const technologyRows = [
   [
     { name: "PostgreSQL", icon: `${iconBase}/postgresql/postgresql-original.svg` },
     { name: "MariaDB", icon: `${iconBase}/mariadb/mariadb-original.svg` },
+    { name: "MongoDB", icon: `${iconBase}/mongodb/mongodb-original.svg` },
     { name: "Redis", icon: `${iconBase}/redis/redis-original.svg` },
     { name: "Kafka", icon: `${iconBase}/apachekafka/apachekafka-original.svg` },
     { name: "RabbitMQ", icon: `${iconBase}/rabbitmq/rabbitmq-original.svg` }
