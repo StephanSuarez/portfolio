@@ -11,7 +11,8 @@ import {
   Network,
   Phone,
   Rocket,
-  Send
+  Send,
+  Smartphone
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Header } from "./components/Header";
@@ -102,8 +103,8 @@ const copy = {
     ],
     experienceEyebrow: "Experience",
     experienceTitle: "Real work with live systems.",
-    projectsEyebrow: "Projects and domains",
-    projectsTitle: "Cases that show technical judgment.",
+    projectsEyebrow: "Representative work",
+    projectsTitle: "Private products I have helped build and operate.",
     stackEyebrow: "Stack",
     stackTitle: "Stack for building complete applications.",
     stackIntro:
@@ -165,31 +166,31 @@ const copy = {
     projects: [
       {
         icon: Bot,
-        title: "AI agents in product",
+        title: "Fluxi · AI and ecommerce platform",
         body:
-          "Integration of AI agents into real business flows, connecting backend, internal services, and user experience.",
-        tags: ["Applied AI", "Backend", "Next.js"]
+          "Membership-gated web product with AI agents, ecommerce workflows, internal services, and product-facing interfaces. Private production work, available to discuss in detail during interviews.",
+        tags: ["AI agents", "Ecommerce", "Private SaaS"]
       },
       {
         icon: CreditCard,
-        title: "Payments and ecommerce integrations",
+        title: "Fluxi · Payments and integrations",
         body:
-          "Implementation of Mercado Pago, Stripe, Shopify, and Dropi integrations with attention to consistency, errors, callbacks, and traceability.",
-        tags: ["Stripe", "Shopify", "APIs"]
+          "Backend and full-stack work around Stripe, Mercado Pago, Shopify, Dropi, callbacks, payment states, operational errors, and traceability across real business flows.",
+        tags: ["Stripe", "Mercado Pago", "Shopify"]
+      },
+      {
+        icon: Smartphone,
+        title: "Whatxi · Taxi service mobile app",
+        body:
+          "Mobile product for requesting taxi services, with backend flows for service requests, operational coordination, and user-facing app behavior. Not publicly linked because it is an app product.",
+        tags: ["Mobile app", "Services", "Backend"]
       },
       {
         icon: Network,
-        title: "Event-driven architecture",
+        title: "Production systems and async flows",
         body:
-          "Work on messaging services and publisher/subscriber patterns for real-time interactions and decoupled processes.",
-        tags: ["Kafka", "RabbitMQ", "EDA"]
-      },
-      {
-        icon: CloudCog,
-        title: "Cloud operations on AWS",
-        body:
-          "Support for deployments, containers, diagnostics, and service operation on AWS, focused on availability and maintenance.",
-        tags: ["EKS", "RDS", "SQS"]
+          "Event-driven services, queues, containers, cloud infrastructure, logs, incident diagnosis, and production support across private systems.",
+        tags: ["AWS", "Queues", "Observability"]
       }
     ]
   },
@@ -235,8 +236,8 @@ const copy = {
     ],
     experienceEyebrow: "Experiencia",
     experienceTitle: "Trabajo real con sistemas vivos.",
-    projectsEyebrow: "Proyectos y dominios",
-    projectsTitle: "Casos que muestran criterio técnico.",
+    projectsEyebrow: "Trabajo representativo",
+    projectsTitle: "Productos privados que he ayudado a construir y operar.",
     stackEyebrow: "Stack",
     stackTitle: "Stack para levantar aplicaciones completas.",
     stackIntro:
@@ -298,31 +299,31 @@ const copy = {
     projects: [
       {
         icon: Bot,
-        title: "Agentes de IA en producto",
+        title: "Fluxi · Plataforma de IA y ecommerce",
         body:
-          "Integración de agentes de IA dentro de flujos reales de negocio, conectando backend, servicios internos y experiencia de usuario.",
-        tags: ["IA aplicada", "Backend", "Next.js"]
+          "Producto web con membresía, agentes de IA, flujos de ecommerce, servicios internos e interfaces de producto. Trabajo privado en producción, explicable con detalle en entrevista.",
+        tags: ["Agentes IA", "Ecommerce", "SaaS privado"]
       },
       {
         icon: CreditCard,
-        title: "Pagos e integraciones ecommerce",
+        title: "Fluxi · Pagos e integraciones",
         body:
-          "Implementación de integraciones con Mercado Pago, Stripe, Shopify y Dropi, cuidando consistencia, errores, callbacks y trazabilidad.",
-        tags: ["Stripe", "Shopify", "APIs"]
+          "Trabajo backend y full-stack alrededor de Stripe, Mercado Pago, Shopify, Dropi, callbacks, estados de pago, errores operativos y trazabilidad.",
+        tags: ["Stripe", "Mercado Pago", "Shopify"]
+      },
+      {
+        icon: Smartphone,
+        title: "Whatxi · App móvil para servicios de taxi",
+        body:
+          "Producto móvil para solicitar servicios de taxi, con backend para solicitudes, coordinación operativa y comportamiento de la app. No tiene link público porque es una aplicación.",
+        tags: ["App móvil", "Servicios", "Backend"]
       },
       {
         icon: Network,
-        title: "Arquitectura orientada a eventos",
+        title: "Sistemas en producción y flujos asíncronos",
         body:
-          "Participación en servicios con mensajería y patrón publicador/suscriptor para interacciones en tiempo real y procesos desacoplados.",
-        tags: ["Kafka", "RabbitMQ", "EDA"]
-      },
-      {
-        icon: CloudCog,
-        title: "Operación cloud en AWS",
-        body:
-          "Apoyo en despliegues, contenedores, diagnóstico y operación de servicios sobre AWS, con foco en disponibilidad y mantenimiento.",
-        tags: ["EKS", "RDS", "SQS"]
+          "Servicios orientados a eventos, colas, contenedores, infraestructura cloud, logs, diagnóstico de incidentes y soporte de producción en sistemas privados.",
+        tags: ["AWS", "Colas", "Observabilidad"]
       }
     ]
   }
