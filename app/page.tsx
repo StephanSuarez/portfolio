@@ -22,6 +22,7 @@ const languageStorageKey = "portfolio-language";
 type Language = "en" | "es";
 
 const iconBase = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
+const simpleIconBase = "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons";
 
 const technologyRows = [
   [
@@ -35,6 +36,7 @@ const technologyRows = [
   ],
   [
     { name: "AWS", icon: `${iconBase}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+    { name: "Google Cloud", icon: `${iconBase}/googlecloud/googlecloud-original.svg` },
     { name: "Docker", icon: `${iconBase}/docker/docker-original.svg` },
     { name: "Kubernetes", icon: `${iconBase}/kubernetes/kubernetes-plain.svg` },
     { name: "GitHub", icon: `${iconBase}/github/github-original.svg` },
@@ -47,6 +49,13 @@ const technologyRows = [
     { name: "Redis", icon: `${iconBase}/redis/redis-original.svg` },
     { name: "Kafka", icon: `${iconBase}/apachekafka/apachekafka-original.svg` },
     { name: "RabbitMQ", icon: `${iconBase}/rabbitmq/rabbitmq-original.svg` }
+  ],
+  [
+    { name: "Codex", icon: `${simpleIconBase}/openai.svg` },
+    { name: "Claude", icon: `${simpleIconBase}/claude.svg` },
+    { name: "OpenAI", icon: `${simpleIconBase}/openai.svg` },
+    { name: "Anthropic", icon: `${simpleIconBase}/anthropic.svg` },
+    { name: "GitHub Copilot", icon: `${simpleIconBase}/githubcopilot.svg` }
   ]
 ];
 
