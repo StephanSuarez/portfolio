@@ -19,6 +19,32 @@ const languageStorageKey = "portfolio-language";
 
 type Language = "en" | "es";
 
+const iconBase = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
+
+const technologyRows = [
+  [
+    { name: "Kotlin", icon: `${iconBase}/kotlin/kotlin-original.svg` },
+    { name: "Next.js", icon: `${iconBase}/nextjs/nextjs-original.svg` },
+    { name: "React", icon: `${iconBase}/react/react-original.svg` },
+    { name: "TypeScript", icon: `${iconBase}/typescript/typescript-original.svg` },
+    { name: "Node.js", icon: `${iconBase}/nodejs/nodejs-original.svg` }
+  ],
+  [
+    { name: "AWS", icon: `${iconBase}/amazonwebservices/amazonwebservices-original-wordmark.svg` },
+    { name: "Docker", icon: `${iconBase}/docker/docker-original.svg` },
+    { name: "Kubernetes", icon: `${iconBase}/kubernetes/kubernetes-plain.svg` },
+    { name: "GitHub", icon: `${iconBase}/github/github-original.svg` },
+    { name: "Git", icon: `${iconBase}/git/git-original.svg` }
+  ],
+  [
+    { name: "PostgreSQL", icon: `${iconBase}/postgresql/postgresql-original.svg` },
+    { name: "MariaDB", icon: `${iconBase}/mariadb/mariadb-original.svg` },
+    { name: "Redis", icon: `${iconBase}/redis/redis-original.svg` },
+    { name: "Kafka", icon: `${iconBase}/apachekafka/apachekafka-original.svg` },
+    { name: "RabbitMQ", icon: `${iconBase}/rabbitmq/rabbitmq-original.svg` }
+  ]
+];
+
 const copy = {
   en: {
     heroEyebrow: "Bogota, Colombia · Open to tech roles",
@@ -45,7 +71,27 @@ const copy = {
     projectsEyebrow: "Projects and domains",
     projectsTitle: "Cases that show technical judgment.",
     stackEyebrow: "Stack",
-    stackTitle: "Technologies I have used to build and operate software.",
+    stackTitle: "Stack for building complete applications.",
+    stackIntro:
+      "A practical toolset across product, backend, frontend, cloud infrastructure, data, messaging, and production observability.",
+    stackSliderLabel: "Technology logo slider",
+    stackPanels: [
+      {
+        title: "Product engineering",
+        body:
+          "Frontend and backend working together: interfaces, APIs, integrations, business rules, and production-ready delivery."
+      },
+      {
+        title: "Cloud & infrastructure",
+        body:
+          "Containers, AWS services, queues, storage, databases, permissions, deployment flows, and operational diagnosis."
+      },
+      {
+        title: "Data & async systems",
+        body:
+          "Relational and NoSQL data, event-driven communication, publisher/subscriber flows, and background processes."
+      }
+    ],
     contactEyebrow: "Contact",
     contactTitle: "Looking for my next challenge in technology.",
     contactBody:
@@ -111,32 +157,6 @@ const copy = {
           "Support for deployments, containers, diagnostics, and service operation on AWS, focused on availability and maintenance.",
         tags: ["EKS", "RDS", "SQS"]
       }
-    ],
-    stackGroups: [
-      {
-        title: "Backend",
-        body: "Kotlin, REST APIs, microservices, modular monoliths, distributed services."
-      },
-      {
-        title: "Frontend",
-        body: "Next.js, end-to-end features, product integration, and service integration."
-      },
-      {
-        title: "Cloud & DevOps",
-        body: "AWS, EKS, EC2, RDS, S3, ECR, SQS, IAM, Docker, Git."
-      },
-      {
-        title: "Data & Messaging",
-        body: "Oracle, MariaDB, NoSQL databases, Kafka, RabbitMQ, publisher/subscriber patterns."
-      },
-      {
-        title: "Observability",
-        body: "CloudWatch, Sentry, incident diagnosis, and error tracking."
-      },
-      {
-        title: "Architecture",
-        body: "SOLID, clean architecture, layered separation, interfaces, and abstractions."
-      }
     ]
   },
   es: {
@@ -164,7 +184,27 @@ const copy = {
     projectsEyebrow: "Proyectos y dominios",
     projectsTitle: "Casos que muestran criterio técnico.",
     stackEyebrow: "Stack",
-    stackTitle: "Tecnologías con las que he construido y operado.",
+    stackTitle: "Stack para levantar aplicaciones completas.",
+    stackIntro:
+      "Un conjunto práctico para producto, backend, frontend, infraestructura cloud, datos, mensajería y observabilidad en producción.",
+    stackSliderLabel: "Slider de logos de tecnologías",
+    stackPanels: [
+      {
+        title: "Ingeniería de producto",
+        body:
+          "Frontend y backend trabajando juntos: interfaces, APIs, integraciones, reglas de negocio y entregas listas para producción."
+      },
+      {
+        title: "Cloud e infraestructura",
+        body:
+          "Contenedores, servicios AWS, colas, almacenamiento, bases de datos, permisos, despliegues y diagnóstico operativo."
+      },
+      {
+        title: "Datos y sistemas asíncronos",
+        body:
+          "Datos relacionales y NoSQL, comunicación orientada a eventos, flujos publicador/suscriptor y procesos en segundo plano."
+      }
+    ],
     contactEyebrow: "Contacto",
     contactTitle: "Busco mi siguiente reto en tecnología.",
     contactBody:
@@ -229,32 +269,6 @@ const copy = {
         body:
           "Apoyo en despliegues, contenedores, diagnóstico y operación de servicios sobre AWS, con foco en disponibilidad y mantenimiento.",
         tags: ["EKS", "RDS", "SQS"]
-      }
-    ],
-    stackGroups: [
-      {
-        title: "Backend",
-        body: "Kotlin, APIs REST, microservicios, monolitos modulares, servicios distribuidos."
-      },
-      {
-        title: "Frontend",
-        body: "Next.js, funcionalidades end-to-end, integración con producto y servicios."
-      },
-      {
-        title: "Cloud & DevOps",
-        body: "AWS, EKS, EC2, RDS, S3, ECR, SQS, IAM, Docker, Git."
-      },
-      {
-        title: "Datos & Mensajería",
-        body: "Oracle, MariaDB, bases NoSQL, Kafka, RabbitMQ, patrón publicador/suscriptor."
-      },
-      {
-        title: "Observabilidad",
-        body: "CloudWatch, Sentry, diagnóstico de incidentes y seguimiento de errores."
-      },
-      {
-        title: "Arquitectura",
-        body: "SOLID, arquitectura limpia, separación por capas, interfaces y abstracciones."
       }
     ]
   }
@@ -380,16 +394,37 @@ export default function Home() {
         </section>
 
         <section id="stack" className="section stack-section">
-          <div className="section-heading">
-            <p className="eyebrow">{t.stackEyebrow}</p>
-            <h2>{t.stackTitle}</h2>
+          <div className="section-heading stack-heading">
+            <div>
+              <p className="eyebrow">{t.stackEyebrow}</p>
+              <h2>{t.stackTitle}</h2>
+            </div>
+            <p>{t.stackIntro}</p>
           </div>
-          <div className="stack-groups">
-            {t.stackGroups.map((group) => (
-              <div className="stack-group" key={group.title}>
-                <h3>{group.title}</h3>
-                <p>{group.body}</p>
+
+          <div className="tech-showcase" aria-label={t.stackSliderLabel}>
+            {technologyRows.map((row, rowIndex) => (
+              <div className="tech-marquee" key={row.map((tech) => tech.name).join("-")}>
+                <div className={`tech-track ${rowIndex % 2 === 1 ? "reverse" : ""}`}>
+                  {[...row, ...row].map((tech, techIndex) => (
+                    <span className="tech-pill" key={`${tech.name}-${techIndex}`}>
+                      <span className="tech-logo">
+                        <img src={tech.icon} alt="" loading="lazy" />
+                      </span>
+                      {tech.name}
+                    </span>
+                  ))}
+                </div>
               </div>
+            ))}
+          </div>
+
+          <div className="stack-panels">
+            {t.stackPanels.map((panel) => (
+              <article className="stack-panel" key={panel.title}>
+                <h3>{panel.title}</h3>
+                <p>{panel.body}</p>
+              </article>
             ))}
           </div>
         </section>
