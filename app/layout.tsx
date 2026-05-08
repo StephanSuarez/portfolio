@@ -4,7 +4,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Stephan Suárez | Backend & Full-Stack Developer",
   description:
-    "Portfolio of Stephan Suárez, a backend/full-stack developer experienced with Kotlin, Next.js, AWS, integrations, and production systems."
+    "Portfolio of Stephan Suárez, a backend/full-stack developer experienced with Kotlin, Next.js, AWS, integrations, and production systems.",
+  icons: {
+    icon: "/computer-icon.svg"
+  }
 };
 
 export default function RootLayout({
