@@ -5,9 +5,11 @@ import { useState } from "react";
 
 type HeaderProps = {
   basePath: string;
+  language: "en" | "es";
+  onToggleLanguage: () => void;
 };
 
-export function Header({ basePath }: HeaderProps) {
+export function Header({ basePath, language, onToggleLanguage }: HeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const closeMenu = () => setIsOpen(false);
@@ -19,18 +21,21 @@ export function Header({ basePath }: HeaderProps) {
       </a>
       <nav className={`nav ${isOpen ? "open" : ""}`} aria-label="Navegación principal">
         <a href="#experiencia" onClick={closeMenu}>
-          Experiencia
+          {language === "es" ? "Experiencia" : "Experience"}
         </a>
         <a href="#proyectos" onClick={closeMenu}>
-          Proyectos
+          {language === "es" ? "Proyectos" : "Projects"}
         </a>
         <a href="#stack" onClick={closeMenu}>
           Stack
         </a>
         <a href="#contacto" onClick={closeMenu}>
-          Contacto
+          {language === "es" ? "Contacto" : "Contact"}
         </a>
       </nav>
+      <button className="language-toggle" type="button" onClick={onToggleLanguage}>
+        {language === "es" ? "EN" : "ES"}
+      </button>
       <a
         className="header-action"
         href={`${basePath}/assets/CV_Stephan_Suarez.pdf`}

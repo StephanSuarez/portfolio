@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Stephan Suárez | Backend & Full-Stack Developer",
   description:
-    "Portafolio de Stephan Suárez, desarrollador backend/full-stack con experiencia en Kotlin, Next.js, AWS, integraciones y sistemas en producción."
+    "Portfolio of Stephan Suárez, a backend/full-stack developer experienced with Kotlin, Next.js, AWS, integrations, and production systems."
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="en">
       <body>{children}</body>
     </html>
   );
