@@ -1,27 +1,40 @@
-# Portfolio
+# Portafolio Next.js de Stephan Suárez
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+Portafolio construido con Next.js y configurado para export estático en GitHub Pages.
 
-## Development server
+## Ver localmente
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```bash
+npm install
+npm run dev
+```
 
-## Code scaffolding
+Luego visita `http://localhost:3000`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Build estático
 
-## Build
+```bash
+npm run build
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Next.js generará la carpeta `out/`, que es lo que GitHub Pages publica.
 
-## Running unit tests
+## Publicar en GitHub Pages
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Repositorio:
 
-## Running end-to-end tests
+```text
+git@github.com:StephanSuarez/portfolio.git
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Sube estos archivos a la rama `main`.
+2. En GitHub entra a `Settings` -> `Pages`.
+3. En `Build and deployment`, elige `GitHub Actions`.
+4. Haz push a `main`. El workflow de `.github/workflows/deploy.yml` construirá y publicará el sitio.
+5. GitHub publicará el portafolio en:
 
-## Further help
+```text
+https://stephansuarez.github.io/portfolio/
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Si quieres que el sitio quede en `https://stephansuarez.github.io/`, el repositorio debe llamarse exactamente `StephanSuarez.github.io`.
