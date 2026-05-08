@@ -5,10 +5,12 @@ import {
   BriefcaseBusiness,
   CloudCog,
   CreditCard,
+  GitBranch,
   Linkedin,
   Mail,
   Network,
   Phone,
+  Rocket,
   Send
 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -55,10 +57,30 @@ const copy = {
     secondaryAction: "Let's talk",
     proofLabel: "Professional summary",
     proof: [
-      ["2+ years", "professional experience"],
-      ["Production", "deployments, support, and real incidents"],
-      ["AWS", "EKS, ECR, RDS, S3, SQS, IAM"],
-      ["End-to-end", "idea, architecture, code, deployment, and operations"]
+      {
+        eyebrow: "Experience",
+        title: "2+ years",
+        body: "Building, shipping, and supporting real product features.",
+        icon: BriefcaseBusiness
+      },
+      {
+        eyebrow: "Production",
+        title: "Live systems",
+        body: "Deployments, support, incidents, diagnostics, and fixes.",
+        icon: Rocket
+      },
+      {
+        eyebrow: "Cloud",
+        title: "AWS stack",
+        body: "EKS, ECR, RDS, S3, SQS, IAM, containers, and load balancers.",
+        icon: CloudCog
+      },
+      {
+        eyebrow: "Delivery",
+        title: "End-to-end",
+        body: "From idea and architecture to code, deployment, and operation.",
+        icon: GitBranch
+      }
     ],
     profileEyebrow: "Profile",
     profileTitle: "Systems engineer who turns requirements into working products.",
@@ -168,10 +190,30 @@ const copy = {
     secondaryAction: "Hablemos",
     proofLabel: "Resumen profesional",
     proof: [
-      ["2+ años", "experiencia profesional"],
-      ["Producción", "despliegues, soporte e incidentes reales"],
-      ["AWS", "EKS, ECR, RDS, S3, SQS, IAM"],
-      ["End-to-end", "idea, arquitectura, código, despliegue y operación"]
+      {
+        eyebrow: "Experiencia",
+        title: "2+ años",
+        body: "Construyendo, entregando y soportando funcionalidades reales de producto.",
+        icon: BriefcaseBusiness
+      },
+      {
+        eyebrow: "Producción",
+        title: "Sistemas vivos",
+        body: "Despliegues, soporte, incidentes, diagnóstico y correcciones.",
+        icon: Rocket
+      },
+      {
+        eyebrow: "Cloud",
+        title: "Stack AWS",
+        body: "EKS, ECR, RDS, S3, SQS, IAM, contenedores y balanceadores.",
+        icon: CloudCog
+      },
+      {
+        eyebrow: "Entrega",
+        title: "End-to-end",
+        body: "De idea y arquitectura a código, despliegue y operación.",
+        icon: GitBranch
+      }
     ],
     profileEyebrow: "Perfil",
     profileTitle: "Ingeniero de sistemas que convierte requerimientos en producto funcionando.",
@@ -321,12 +363,20 @@ export default function Home() {
         </section>
 
         <section className="proof-band" aria-label={t.proofLabel}>
-          {t.proof.map(([title, body]) => (
-            <div key={title}>
-              <strong>{title}</strong>
-              <span>{body}</span>
-            </div>
-          ))}
+          {t.proof.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <article className="proof-card" key={item.title}>
+                <div className="proof-card-top">
+                  <span>{item.eyebrow}</span>
+                  <Icon aria-hidden="true" />
+                </div>
+                <strong>{item.title}</strong>
+                <p>{item.body}</p>
+              </article>
+            );
+          })}
         </section>
 
         <section className="section intro-section">
