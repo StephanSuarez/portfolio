@@ -31,10 +31,10 @@ const stack = [
 const copy = {
   en: {
     nav: { work: "Work", experience: "Experience", stack: "Stack", contact: "Contact", cv: "CV" },
-    heroEyebrow: "Bogotá, Colombia · Remote",
+    heroEyebrow: "Bogotá, Colombia",
     heroTitle: "Software engineer for production systems and applied AI.",
     heroCopy:
-      "Backend, full-stack and AI features for e-commerce: order and logistics automation, payment providers, multi-country operations and WhatsApp chatbots.",
+      "Three years building and operating e-commerce software: order and logistics automation, payment providers, multi-country operations and WhatsApp chatbots with AI.",
     primaryAction: "See the work",
     secondaryAction: "Download CV",
     highlights: [
@@ -44,8 +44,8 @@ const copy = {
       { value: "400–700", label: "daily messages handled by AI chatbots" }
     ],
     workEyebrow: "Work",
-    workTitle: "What I have built at Fluxi.",
-    workIntro: "A platform that creates AI-generated sales funnels for e-commerce in Latin America. Private product work; the outcomes are real.",
+    workTitle: "What I build.",
+    workIntro: "Since 2024 at Fluxi, a platform that creates AI-generated sales funnels for e-commerce in Latin America.",
     work: [
       {
         title: "AI funnel generation",
@@ -54,7 +54,7 @@ const copy = {
       },
       {
         title: "Order and logistics automation",
-        body: "Every order dispatches itself to Dropi, Mastershop or Shopify: persistent retries, variant mapping and per-country catalogs, over a flow that grew from zero to more than 25,000 orders a month.",
+        body: "Every order dispatches itself to Dropi, Mastershop or Shopify: persistent retries, variant mapping and per-country catalogs.",
         tags: ["Dropi", "Mastershop", "Shopify"]
       },
       {
@@ -86,7 +86,7 @@ const copy = {
         title: "Fluxi",
         role: "Software Developer",
         bullets: [
-          "Backend and full-stack development for AI funnel generation, order automation, payment providers and WhatsApp chatbots.",
+          "Owner of features end to end, from analysis and design to production: Kotlin backend, React and Next.js frontends, Python AI services.",
           "Production operations on AWS: EKS, RDS, S3, SQS, Lambda and load balancers; incident diagnosis with CloudWatch, Sentry and database queries.",
           "Agent-driven development end to end: analysis, implementation, automated PR review, browser end-to-end testing and deployment."
         ]
@@ -116,14 +116,14 @@ const copy = {
     contactTitle: "Let's talk.",
     contactBody: "Open to Software Engineer and AI Engineer roles, remote or in Bogotá.",
     writeMe: "Email me",
-    footer: "Software Engineer · Backend, full-stack and applied AI"
+    footer: "Bogotá, Colombia"
   },
   es: {
     nav: { work: "Trabajo", experience: "Experiencia", stack: "Stack", contact: "Contacto", cv: "CV" },
-    heroEyebrow: "Bogotá, Colombia · Remoto",
+    heroEyebrow: "Bogotá, Colombia",
     heroTitle: "Ingeniero de software para sistemas en producción e IA aplicada.",
     heroCopy:
-      "Backend, full-stack y funcionalidades de IA para ecommerce: automatización de órdenes y logística, pasarelas de pago, operación multipaís y chatbots de WhatsApp.",
+      "Tres años construyendo y operando software para ecommerce: automatización de órdenes y logística, pasarelas de pago, operación multipaís y chatbots de WhatsApp con IA.",
     primaryAction: "Ver el trabajo",
     secondaryAction: "Descargar CV",
     highlights: [
@@ -133,8 +133,8 @@ const copy = {
       { value: "400–700", label: "mensajes diarios atendidos por chatbots con IA" }
     ],
     workEyebrow: "Trabajo",
-    workTitle: "Lo que he construido en Fluxi.",
-    workIntro: "Una plataforma que crea embudos de venta con inteligencia artificial para ecommerce en Latinoamérica. Producto privado; los resultados son reales.",
+    workTitle: "Lo que construyo.",
+    workIntro: "Desde 2024 en Fluxi, una plataforma que crea embudos de venta con inteligencia artificial para ecommerce en Latinoamérica.",
     work: [
       {
         title: "Creación de embudos con IA",
@@ -143,7 +143,7 @@ const copy = {
       },
       {
         title: "Automatización de órdenes y logística",
-        body: "Cada orden se despacha sola a Dropi, Mastershop o Shopify: reintentos persistentes, mapeo de variantes y catálogo por país, sobre un flujo que pasó de cero a más de 25.000 órdenes al mes.",
+        body: "Cada orden se despacha sola a Dropi, Mastershop o Shopify: reintentos persistentes, mapeo de variantes y catálogo por país.",
         tags: ["Dropi", "Mastershop", "Shopify"]
       },
       {
@@ -175,7 +175,7 @@ const copy = {
         title: "Fluxi",
         role: "Desarrollador de Software",
         bullets: [
-          "Desarrollo backend y full-stack para generación de embudos con IA, automatización de órdenes, pasarelas de pago y chatbots de WhatsApp.",
+          "Responsable de funcionalidades de punta a punta, del análisis y diseño a producción: backend en Kotlin, frontends en React y Next.js, servicios de IA en Python.",
           "Operación en producción sobre AWS: EKS, RDS, S3, SQS, Lambda y balanceadores; diagnóstico de incidentes con CloudWatch, Sentry y consultas a la base de datos.",
           "Desarrollo con agentes de código de punta a punta: análisis, implementación, revisión automatizada del PR, pruebas end-to-end en navegador y despliegue."
         ]
@@ -205,7 +205,7 @@ const copy = {
     contactTitle: "Hablemos.",
     contactBody: "Abierto a roles de Software Engineer y AI Engineer, remotos o en Bogotá.",
     writeMe: "Escribirme",
-    footer: "Ingeniero de Software · Backend, full-stack e IA aplicada"
+    footer: "Bogotá, Colombia"
   }
 };
 
@@ -239,8 +239,7 @@ export default function Home() {
       <main>
         <section id="inicio" className="hero">
           <p className="eyebrow">{t.heroEyebrow}</p>
-          <h1>Stephan Suárez</h1>
-          <p className="hero-title">{t.heroTitle}</p>
+          <h1>{t.heroTitle}</h1>
           <p className="hero-copy">{t.heroCopy}</p>
           <div className="actions">
             <a className="button primary" href="#trabajo">
