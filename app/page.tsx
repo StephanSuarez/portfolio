@@ -11,8 +11,7 @@ type Language = "en" | "es";
 const links = {
   email: "mailto:stph4211@gmail.com",
   linkedin: "https://www.linkedin.com/in/stephan-suarez-38586b266",
-  github: "https://github.com/StephanSuarez",
-  phone: "tel:+573222249396"
+  github: "https://github.com/StephanSuarez"
 };
 
 const cvFile: Record<Language, string> = {
@@ -114,7 +113,7 @@ const copy = {
     stackTitle: "Tools I work with.",
     contactEyebrow: "Contact",
     contactTitle: "Let's talk.",
-    contactBody: "Open to Software Engineer and AI Engineer roles, remote or in Bogotá.",
+    contactBody: "Open to Software Engineer and AI Engineer roles.",
     writeMe: "Email me",
     footer: "Bogotá, Colombia"
   },
@@ -203,7 +202,7 @@ const copy = {
     stackTitle: "Herramientas con las que trabajo.",
     contactEyebrow: "Contacto",
     contactTitle: "Hablemos.",
-    contactBody: "Abierto a roles de Software Engineer y AI Engineer, remotos o en Bogotá.",
+    contactBody: "Abierto a roles de Software Engineer y AI Engineer.",
     writeMe: "Escribirme",
     footer: "Bogotá, Colombia"
   }
@@ -338,9 +337,6 @@ export default function Home() {
             </a>
             <a className="button secondary" href={links.github} target="_blank" rel="noreferrer">
               GitHub
-            </a>
-            <a className="button secondary" href={links.phone}>
-              +57 322 224 9396
             </a>
           </div>
         </section>
