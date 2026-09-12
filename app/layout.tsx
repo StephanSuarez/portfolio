@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Stephan Suárez | Backend & Full-Stack Developer",
+  title: "Stephan Suárez | Software Engineer",
   description:
-    "Portfolio of Stephan Suárez, a backend/full-stack developer experienced with Kotlin, Next.js, AWS, integrations, and production systems.",
+    "Software engineer in Bogotá: backend, full-stack and applied AI for e-commerce. Order and logistics automation, payment providers, multi-country operations and WhatsApp chatbots.",
   icons: {
     icon: "/computer-icon.svg"
   }
