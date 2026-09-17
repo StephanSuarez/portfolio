@@ -327,6 +327,22 @@ h2 {
   margin-top: auto;
 }
 
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.card-links a {
+  color: var(--accent);
+}
+
+.card-links a:hover {
+  text-decoration: underline;
+}
+
 /* Experience */
 
 .timeline {

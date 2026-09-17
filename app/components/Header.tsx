@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-type NavCopy = { work: string; experience: string; stack: string; contact: string; cv: string };
+type NavCopy = { work: string; projects: string; experience: string; stack: string; contact: string; cv: string };
 
 type HeaderProps = {
   nav: NavCopy;
@@ -24,6 +24,7 @@ export function Header({ nav, cvHref, language, onToggleLanguage }: HeaderProps)
         <nav className={`nav ${isOpen ? "open" : ""}`}>
           <a href="#trabajo" onClick={closeMenu}>{nav.work}</a>
           <a href="#experiencia" onClick={closeMenu}>{nav.experience}</a>
+          <a href="#proyectos" onClick={closeMenu}>{nav.projects}</a>
           <a href="#stack" onClick={closeMenu}>{nav.stack}</a>
           <a href="#contacto" onClick={closeMenu}>{nav.contact}</a>
         </nav>

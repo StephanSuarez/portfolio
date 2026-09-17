@@ -14,6 +14,13 @@ const links = {
   github: "https://github.com/StephanSuarez"
 };
 
+const projectLinks = {
+  chatbotDemo: "https://chatbot-atencion-stph4211-8203s-projects.vercel.app?_vercel_share=vxguuVwsHzsexRbrrdCrIN5gyPFQ1max",
+  chatbotCode: "https://github.com/StephanSuarez/chatbot-atencion",
+  driversSite: "https://stephansuarez.github.io/driversapp-site/",
+  driversCode: "https://github.com/StephanSuarez?tab=repositories&q=driversapp"
+};
+
 const cvFile: Record<Language, string> = {
   en: `${basePath}/assets/CV_Stephan_Suarez_EN.pdf`,
   es: `${basePath}/assets/CV_Stephan_Suarez.pdf`
@@ -29,7 +36,7 @@ const stack = [
 
 const copy = {
   en: {
-    nav: { work: "Work", experience: "Experience", stack: "Stack", contact: "Contact", cv: "CV" },
+    nav: { work: "Work", projects: "Projects", experience: "Experience", stack: "Stack", contact: "Contact", cv: "CV" },
     heroEyebrow: "Bogotá, Colombia",
     heroTitle: "Software engineer for production systems and applied AI.",
     heroCopy:
@@ -77,6 +84,29 @@ const copy = {
         tags: ["Kotlin", "Firebase", "React"]
       }
     ],
+    projectsEyebrow: "Projects",
+    projectsTitle: "Side projects.",
+    projectsIntro: "Built outside of work. Try them and read the code.",
+    projects: [
+      {
+        title: "Customer service chatbot",
+        body: "A platform to set up a company's chatbot: it answers only from the knowledge you load (text, PDF or Word, with RAG), hands the conversation to a person when it doesn't know or the customer is upset, and books appointments in Google Calendar. Includes simulations to evaluate it and metrics on resolved versus handed-off conversations.",
+        tags: ["Next.js", "TypeScript", "PostgreSQL", "pgvector", "OpenAI"],
+        links: [
+          { label: "Try the demo", href: projectLinks.chatbotDemo },
+          { label: "Code", href: projectLinks.chatbotCode }
+        ]
+      },
+      {
+        title: "DriversApp",
+        body: "A taxi platform for Bogotá: passengers request rides over WhatsApp, the API quotes the route and offers the ride to one available driver at a time, and the trip is verified with a code and tracked live. Driver sign-up with on-device OCR and face detection, and memberships paid through Wompi. Built with @jhonatandgomez.",
+        tags: ["Flutter", "Kotlin", "Micronaut", "Redis", "Next.js"],
+        links: [
+          { label: "See the case study", href: projectLinks.driversSite },
+          { label: "Code", href: projectLinks.driversCode }
+        ]
+      }
+    ],
     experienceEyebrow: "Experience",
     experienceTitle: "Where I have worked.",
     experience: [
@@ -118,7 +148,7 @@ const copy = {
     footer: "Bogotá, Colombia"
   },
   es: {
-    nav: { work: "Trabajo", experience: "Experiencia", stack: "Stack", contact: "Contacto", cv: "CV" },
+    nav: { work: "Trabajo", projects: "Proyectos", experience: "Experiencia", stack: "Stack", contact: "Contacto", cv: "CV" },
     heroEyebrow: "Bogotá, Colombia",
     heroTitle: "Ingeniero de software para sistemas en producción e IA aplicada.",
     heroCopy:
@@ -164,6 +194,29 @@ const copy = {
         title: "Cuenta, facturación y notificaciones",
         body: "Historial de créditos, cobro por creación de tienda y centro de notificaciones en tiempo real, con Kotlin en el backend y React y Next.js en el front.",
         tags: ["Kotlin", "Firebase", "React"]
+      }
+    ],
+    projectsEyebrow: "Proyectos",
+    projectsTitle: "Proyectos personales.",
+    projectsIntro: "Construidos fuera del trabajo. Puedes probarlos y leer el código.",
+    projects: [
+      {
+        title: "Chatbot de atención al cliente",
+        body: "Una plataforma para configurar el chatbot de una empresa: responde solo con la información que le cargas (texto, PDF o Word, con RAG), pasa la conversación a una persona cuando no sabe o el cliente está molesto y agenda citas en Google Calendar. Incluye simulaciones para evaluarlo y métricas de conversaciones resueltas frente a derivadas.",
+        tags: ["Next.js", "TypeScript", "PostgreSQL", "pgvector", "OpenAI"],
+        links: [
+          { label: "Probar la demo", href: projectLinks.chatbotDemo },
+          { label: "Código", href: projectLinks.chatbotCode }
+        ]
+      },
+      {
+        title: "DriversApp",
+        body: "Una plataforma de taxis para Bogotá: el pasajero pide el viaje por WhatsApp, la API cotiza la ruta y ofrece el viaje a un conductor disponible a la vez, y el viaje se verifica con un código y se sigue en vivo. Registro de conductores con OCR y detección de rostro en el teléfono, y membresías pagadas con Wompi. Hecho con @jhonatandgomez.",
+        tags: ["Flutter", "Kotlin", "Micronaut", "Redis", "Next.js"],
+        links: [
+          { label: "Ver el caso de estudio", href: projectLinks.driversSite },
+          { label: "Código", href: projectLinks.driversCode }
+        ]
       }
     ],
     experienceEyebrow: "Experiencia",
@@ -304,6 +357,32 @@ export default function Home() {
                 <p className="muted">{t.educationBody}</p>
               </div>
             </article>
+          </div>
+        </section>
+
+        <section id="proyectos" className="section">
+          <p className="eyebrow">{t.projectsEyebrow}</p>
+          <h2>{t.projectsTitle}</h2>
+          <p className="section-intro">{t.projectsIntro}</p>
+          <div className="work-grid">
+            {t.projects.map((item) => (
+              <article className="card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+                <div className="tags">
+                  {item.tags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+                <div className="card-links">
+                  {item.links.map((link) => (
+                    <a key={link.href} href={link.href} target="_blank" rel="noreferrer">
+                      {link.label} ↗
+                    </a>
+                  ))}
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
