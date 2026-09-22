@@ -17,8 +17,7 @@ const links = {
 const projectLinks = {
   chatbotDemo: "https://chatbot-atencion-stph4211-8203s-projects.vercel.app?_vercel_share=vxguuVwsHzsexRbrrdCrIN5gyPFQ1max",
   chatbotCode: "https://github.com/StephanSuarez/chatbot-atencion",
-  driversSite: "https://stephansuarez.github.io/driversapp-site/",
-  driversCode: "https://github.com/StephanSuarez?tab=repositories&q=driversapp"
+  driversSite: "https://stephansuarez.github.io/driversapp-site/"
 };
 
 const cvFile: Record<Language, string> = {
@@ -102,8 +101,7 @@ const copy = {
         body: "A taxi platform for Bogotá: passengers request rides over WhatsApp, the API quotes the route and offers the ride to one available driver at a time, and the trip is verified with a code and tracked live. Driver sign-up with on-device OCR and face detection, and memberships paid through Wompi. Built with @jhonatandgomez.",
         tags: ["Flutter", "Kotlin", "Micronaut", "Redis", "Next.js"],
         links: [
-          { label: "See the case study", href: projectLinks.driversSite },
-          { label: "Code", href: projectLinks.driversCode }
+          { label: "See the case study", href: projectLinks.driversSite }
         ]
       }
     ],
@@ -214,8 +212,7 @@ const copy = {
         body: "Una plataforma de taxis para Bogotá: el pasajero pide el viaje por WhatsApp, la API cotiza la ruta y ofrece el viaje a un conductor disponible a la vez, y el viaje se verifica con un código y se sigue en vivo. Registro de conductores con OCR y detección de rostro en el teléfono, y membresías pagadas con Wompi. Hecho con @jhonatandgomez.",
         tags: ["Flutter", "Kotlin", "Micronaut", "Redis", "Next.js"],
         links: [
-          { label: "Ver el caso de estudio", href: projectLinks.driversSite },
-          { label: "Código", href: projectLinks.driversCode }
+          { label: "Ver el caso de estudio", href: projectLinks.driversSite }
         ]
       }
     ],
